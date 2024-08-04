@@ -29,9 +29,9 @@
     <Classes datatype="tokens">-Organic</Classes>
     <VisibleClasses datatype="tokens">Siege</VisibleClasses>
     <GenericName>Siege</GenericName>
-    <Requirements>
+    <!-- <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
-    </Requirements>
+    </Requirements> -->
   </Identity>
   <Position>
     <Anchor>pitch-roll</Anchor>
@@ -88,4 +88,7 @@
     <Acceleration op="mul">0.15</Acceleration>
     <Weight op="mul">5.0</Weight>
   </UnitMotion>
+  <Vision>
+    <Range>100</Range>
+  </Vision>
 </Entity>

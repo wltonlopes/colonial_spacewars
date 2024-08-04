@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit">
+<Entity parent="template_unit_vehicle">
   <Decay>
     <SinkingAnim>true</SinkingAnim>
     <DelayTime>0.0</DelayTime>
@@ -26,13 +26,14 @@
   <Identity>
     <GenericName>Ship</GenericName>
     <Classes datatype="tokens">-Organic</Classes>
-    <VisibleClasses datatype="tokens">Ship</VisibleClasses>
+    <!-- <VisibleClasses datatype="tokens">Ship</VisibleClasses> -->
   </Identity>
   <Position>
+    <Altitude>2</Altitude>
     <Anchor>upright</Anchor>
     <Floating>true</Floating>
-    <FloatDepth>0</FloatDepth>
-    <TurnRate>1.2</TurnRate>
+    <FloatDepth>10</FloatDepth>
+    <TurnRate>10</TurnRate>
   </Position>
   <Repairable>
     <RepairTimeRatio>4.0</RepairTimeRatio>
@@ -81,11 +82,31 @@
   </StatusBars>
   <TreasureCollector disable=""/>
   <UnitAI>
-    <Formations disable=""/>
+    <DefaultStance>passive</DefaultStance>
+    <FormationController>false</FormationController>
+    <CanGuard>false</CanGuard>
+    <CanPatrol>false</CanPatrol>
+    <PatrolWaitTime>0</PatrolWaitTime>
+    <RoamDistance>1000.0</RoamDistance>
+    <FleeDistance>10.0</FleeDistance>
+    <RoamTimeMin>10000</RoamTimeMin>
+    <RoamTimeMax>100000</RoamTimeMax>
+    <FeedTimeMin>1</FeedTimeMin>
+    <FeedTimeMax>2</FeedTimeMax>
   </UnitAI>
-  <UnitMotion>
-    <PassabilityClass>ship</PassabilityClass>
-    <InstantTurnAngle>10</InstantTurnAngle>
-    <Acceleration op="mul">0.1</Acceleration>
-  </UnitMotion>
+  <UnitMotion disable=""/>
+  <UnitMotionFlying>
+    <MaxSpeed>12.0</MaxSpeed>
+    <TakeoffSpeed>0</TakeoffSpeed>
+    <LandingSpeed>0</LandingSpeed>
+    <AccelRate>10.0</AccelRate>
+    <SlowingRate>0</SlowingRate>
+    <BrakingRate>0</BrakingRate>
+    <TurnRate>2.0</TurnRate>
+    <OvershootTime>2.0</OvershootTime>
+    <FlyingHeight>30.0</FlyingHeight>
+    <ClimbRate>10.0</ClimbRate>
+    <DiesInWater>true</DiesInWater>
+    <PassabilityClass>unrestricted</PassabilityClass>
+  </UnitMotionFlying>
 </Entity>

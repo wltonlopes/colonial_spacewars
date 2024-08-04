@@ -86,7 +86,7 @@
    <UnitMotion>
     <WalkSpeed>12.0</WalkSpeed>
   </UnitMotion>
-    <Vision>
+  <Vision>
     <Range>80</Range>
   </Vision>
 </Entity>
